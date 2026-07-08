@@ -1,49 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Google Search</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; }
-        .search-box {
-            margin-top: 200px;
-        }
-        input[type="text"] {
-            width: 400px;
-            padding: 10px;
-            border-radius: 25px;
-            border: 1px solid #ccc;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        input[type="submit"] {
-            padding: 10px 20px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            cursor: pointer;
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .nav {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 15px;
+            right: 20px;
         }
-        .nav a { margin-left: 15px; text-decoration: none; color: #1a73e8; }
+        .nav a { 
+            margin-left: 20px; 
+            text-decoration: none; 
+            color: #5f6368; 
+            font-size: 13px;
+        }
+        .nav a:hover { text-decoration: underline; }
+        .search-container {
+            margin-top: 200px;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+        .logo {
+            font-size: 90px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            font-family: 'Product Sans', Arial, sans-serif;
+        }
+        /* Fun Google Colors styling */
+        .g1 { color: #4285F4; } .g2 { color: #EA4335; } .g3 { color: #FBBC05; } 
+        .g4 { color: #4285F4; } .g5 { color: #34A853; } .g6 { color: #EA4335; }
+        
+        .search-box {
+            width: 80%;
+            padding: 12px 20px;
+            border-radius: 24px;
+            border: 1px solid #dfe1e5;
+            font-size: 16px;
+            outline: none;
+            margin-bottom: 25px;
+        }
+        .search-box:hover, .search-box:focus {
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
+            border-color: rgba(223,225,229,0);
+        }
+        .buttons input[type="submit"] {
+            padding: 10px 16px;
+            margin: 5px;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            color: #3c4043;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .buttons input[type="submit"]:hover {
+            border: 1px solid #dadce0;
+            color: #202124;
+        }
     </style>
 </head>
 <body>
+
     <div class="nav">
-            <input type="text" name="q">
+        <a href="image_search.html">Image Search</a>
+        <a href="advanced.html">Advanced Search</a>
+    </div>
+
+    <div class="search-container">
+        <div class="logo">
+            <span class="g1">G</span><span class="g2">o</span><span class="g3">o</span><span class="g4">g</span><span class="g5">l</span><span class="g6">e</span>
+        </div>
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" class="search-box" name="q" autofocus required><br>
             <div class="buttons">
                 <input type="submit" value="Google Search">
-    </div>
-</body>
-</html>
                 <input type="submit" name="btnI" value="I'm Feeling Lucky">
             </div>
         </form>
-        <a href="images.html">Image Search</a>
-    <div class="search-box">
-        <form action="https://www.google.com/search">
+    </div>
 
+</body>
+</html>
