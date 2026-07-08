@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Google Advanced Search</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#202124;
+}
+
+/* Top Navigation */
+.nav{
+    display:flex;
+    justify-content:flex-end;
+    padding:18px 30px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#1a73e8;
+    font-size:14px;
+}
+
+/* Logo */
+.logo{
+    margin:20px 40px;
+}
+
+.logo img{
+    width:90px;
+}
+
+h2{
+    color:#d93025;
+    font-size:20px;
+    font-weight:normal;
+    margin:35px 40px;
+}
+
+hr{
+    border:none;
+    border-top:1px solid #dadce0;
+    margin-bottom:40px;
+}
+
+.container{
+    margin-left:40px;
+    width:900px;
+}
+
+.header-row{
+    display:grid;
+    grid-template-columns:260px 550px;
+    font-size:16px;
+    margin-bottom:25px;
+    font-weight:500;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:260px 550px;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.form-row label{
+    font-size:13px;
+}
+
+input[type=text]{
+    width:100%;
+    height:30px;
+    padding:6px 8px;
+    border:1px solid #d9d9d9;
+    font-size:13px;
+}
+
+input[type=text]:focus{
+    outline:none;
+    border:1px solid #4d90fe;
+    box-shadow:0 0 2px rgba(66,133,244,.5);
+}
+
+.button{
+    display:flex;
+    justify-content:flex-end;
+    width:810px;
+    margin-top:25px;
+}
+
+input[type=submit]{
+    background:#4d90fe;
+    color:white;
+    border:1px solid #3079ed;
+    padding:8px 16px;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+input[type=submit]:hover{
+    background:#357ae8;
+}
+</style>
+
+</head>
+<body>
+
+<div class="nav">
+    <a href="index.html">Google Search</a>
+</div>
+
+<div class="logo">
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google">
+</div>
+
+<h2>Advanced Search</h2>
+
+<hr>
+
+<div class="container">
+
+    <div class="header-row">
+        <div>Find pages with...</div>
+        <div>To do this in the search box.</div>
+    </div>
+
+    <form action="https://www.google.com/search">
+
+        <div class="form-row">
+            <label>Find pages with… “all these words:”</label>
+            <input type="text" name="as_q">
+        </div>
+
+        <div class="form-row">
+            <label>Find pages with… “this exact word or phrase:”</label>
+            <input type="text" name="as_epq">
+        </div>
+
+        <div class="form-row">
+            <label>Find pages with… “any of these words:”</label>
+            <input type="text" name="as_oq">
+        </div>
+
+        <div class="form-row">
+            <label>Find pages with… “none of these words:”</label>
+            <input type="text" name="as_eq">
+        </div>
+
+        <div class="button">
+            <input type="submit" value="Advanced Search">
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
