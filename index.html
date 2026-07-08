@@ -24,6 +24,7 @@
             font-size: 13px;
         }
         .nav a:hover { text-decoration: underline; }
+        
         .search-container {
             margin-top: 200px;
             text-align: center;
@@ -35,8 +36,9 @@
             font-weight: bold;
             margin-bottom: 30px;
             font-family: 'Product Sans', Arial, sans-serif;
+            user-select: none;
         }
-
+        /* Google Colors styling */
         .g1 { color: #4285F4; } .g2 { color: #EA4335; } .g3 { color: #FBBC05; } 
         .g4 { color: #4285F4; } .g5 { color: #34A853; } .g6 { color: #EA4335; }
         
@@ -66,6 +68,7 @@
         .buttons input[type="submit"]:hover {
             border: 1px solid #dadce0;
             color: #202124;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -80,6 +83,7 @@
         <div class="logo">
             <span class="g1">G</span><span class="g2">o</span><span class="g3">o</span><span class="g4">g</span><span class="g5">l</span><span class="g6">e</span>
         </div>
+        
         <form action="https://www.google.com/search" method="GET">
             <input type="text" class="search-box" name="q" autofocus required><br>
             <div class="buttons">
@@ -90,8 +94,4 @@
     </div>
 
 </body>
-
 </html>
-
-
-
